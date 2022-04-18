@@ -1,0 +1,27 @@
+{
+    "colorname": {
+      "label": "Couleur noms",
+      "type": "colorpicker",
+      "value": "#000000"
+    },
+    "colormessage": {
+      "label": "Couleur messages",
+      "type": "colorpicker",
+      "value": "#FFFFFF"
+    },
+    "backgroundcolorname1": {
+      "label": "Background couleur noms 1",
+      "type": "colorpicker",
+      "value": "#FFCC99"
+    },
+    "backgroundcolorname2": {
+      "label": "Background couleur noms 2",
+      "type": "colorpicker",
+      "value": "#ffcc99"
+    },
+    "backgroundcolormessage": {
+      "label": "Background couleur messages",
+      "type": "colorpicker",
+      "value": "rgb(100 100 100 / 80%)"
+    }
+  }

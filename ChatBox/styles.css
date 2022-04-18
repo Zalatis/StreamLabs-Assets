@@ -1,0 +1,139 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:700);
+ 
+* {
+    box-sizing: border-box;
+}
+ 
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+ 
+body {
+    background: {background_color};
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: {font_size};
+    line-height: 1.5em;
+}
+
+.name {
+  	color: {colorname};
+}
+
+.message {
+  	color: {colormessage};
+  	padding-top: 2.5px;
+}
+
+#log>div {
+    animation: fadeInBottom 0.4s ease forwards, fadeOut 0.5s ease {message_hide_delay} forwards;
+    -webkit-animation: fadeInBottom 0.4s ease forwards, fadeOut 0.5s ease {message_hide_delay} forwards;
+}
+ 
+@keyframes fadeInBottom {
+   0% {
+      opacity: 0;
+      transform: translateY(55px);
+   }
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+} 
+ 
+.colon {
+    display: none;
+}
+
+#log {
+    display: table;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 0 10px 10px;
+    table-layout: fixed;
+  	width: 100%;
+}
+ 
+#log>div {
+  	display: block;
+  	padding: 3px;
+  	padding-left: 15px;
+  	padding-right: 15px;
+  	margin-top: 5px;
+  	width: fit-content;
+}
+ 
+#log>div.deleted {
+    visibility: hidden;
+}
+ 
+#log .emote {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding: 0.4em 0.2em;
+    position: relative;
+}
+ 
+#log .emote img {
+    display: inline-block;
+    height: 1em;
+    opacity: 0;
+}
+ 
+#log .message,#log .meta {
+    vertical-align: top;
+    display: table-cell;
+    padding-bottom: 0.1em;
+}
+ 
+#log .meta {
+    overflow: hidden;
+    border-radius: 20px;
+    width: fit-content;
+  	padding-left: inherit;
+  	padding-right: inherit;
+  	position: relative;
+}
+
+[data-from]:nth-child(odd) .meta {
+  	background-color: {backgroundcolorname1};
+}
+
+[data-from]:nth-child(even) .meta {
+  	background-color: {backgroundcolorname2};
+}
+
+
+#log .message {
+  	background-color: {backgroundcolormessage};
+    border-radius: 20px;
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-left: 20px;
+    padding-left: inherit;
+    padding-right: inherit;
+    margin-top: -5px;
+    word-break: break-word;
+    hyphens: auto;
+    -webkit-hyphenate-character: "-";
+    hyphenate-character: "-";
+}
+ 
+.badge {
+    display: inline-block;
+    margin-right: 0.2em;
+    position: relative;
+    height: 1em;
+    vertical-align: middle;
+    top: -0.1em;
+  	opacity: 1;
+}
+ 
+.name {
+    margin-left: 0.2em;
+}
